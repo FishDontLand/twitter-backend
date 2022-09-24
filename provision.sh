@@ -53,6 +53,7 @@ USER="admin"
 # superuser密码
 PASS="admin"
 # superuser邮箱
+
 MAIL="admin@twitter.com"
 script="
 from django.contrib.auth.models import User;
