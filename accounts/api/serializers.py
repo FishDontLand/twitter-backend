@@ -42,7 +42,7 @@ class SignupSerializer(serializers.ModelSerializer):
             })
         return data
 
-    def create(selfself, validated_data):
+    def create(self, validated_data):
         # save as lower case
         username = validated_data['username'].lower()
         email = validated_data['email'].lower()
