@@ -3,7 +3,7 @@
 python manage.py runserver 0.0.0.0:8000
 
 ## create new app
-python manage.py startapp tweets
+python manage.py startapp tweets(API name)
 
 ## make migration
 python manage.py makemigrations
@@ -14,6 +14,12 @@ python manage.py makemigrations tweets
 
 Note: makemigrations compares the current model with the database, 
 no modifications to database involved
+
+# run unit tests
+python manage.py test (this run all the unit tests)
+python manage.py test tweets (this only runs tests under tweets)
+python manage.py test tweets.api (only test the unit tests under tweets/api)
+python manage.py test tweets.api.tests.TweetApiTests.test_list (only run one single specific unit test)
 
 ## make changes to database
 python manage.py migrate

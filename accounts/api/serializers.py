@@ -5,7 +5,12 @@ from rest_framework import serializers, exceptions
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'email']
+        fields = ['id', 'username', 'email']
+
+class UserSerializerForPublic(serializers.ModelSerializer):
+    class Meta:
+        model=User
+        fields=('id', 'username')
 
 
 class LoginSerializer(serializers.Serializer):

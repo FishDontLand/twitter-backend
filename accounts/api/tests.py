@@ -1,4 +1,4 @@
-from django.test import TestCase
+from testing.testcase import TestCase
 from rest_framework.test import APIClient
 from django.contrib.auth.models import User
 
@@ -19,10 +19,6 @@ class AccountApiTests(TestCase):
             email='frank@yahoo.com',
             password='1234567889'
         )
-
-    def create_user(self, username, email, password):
-        # can not use User.objects.create because password need to be encrypted
-        return User.objects.create_user(username, email, password)
 
     def test_login(self):
         # login with get method
